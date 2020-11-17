@@ -1,0 +1,22 @@
+<div class="card x-tile">
+    <div class="img-wrapper">
+        <img class="card-img-top" [src]="program.links?.mission_patch_small" alt="mission patch">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+          <a href="#" class="card-link">{{program.mission_name}} #{{program.flight_number}}</a>
+      </h5>
+      <div>
+        Mission Id(s): 
+        <ul>
+            <li *ngFor="let id of program.mission_id">
+                {{id}}
+            </li>
+        </ul>
+      </div>
+    <p>Launch Year: {{program.launch_year}}</p>
+    <p>Successful Launch: {{program.launch_success}}</p>
+    <p>Successful Landing: {{program.landing_success}}</p>
+    </div>
+
+  </div>

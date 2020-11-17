@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="card">
+          <h5 class="card-header">Features</h5>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-10">
+        <div class="row" *ngIf="programs">
+          <div class="col-xs-12 col-sm-4 col-md-3" *ngFor="let program of programs; let i = index">
+            <div class="card">
+              <img class="card-img-top" [src]="program.links?.mission_patch_small" alt="mission patch">
+              <div class="card-body">
+                <h5 class="card-title">
+                    <a href="#" class="card-link">{{mission_name}} #{{flight_number}}</a>
+                </h5>
+              </div>
+              <p>
+                  Mission Id(s): 
+                  <ul>
+                      <li *ngFor="let id of program.mission_id">
+                          {{id}}
+                      </li>
+                  </ul>
+              </p>
+              <p>Launch Year: {{program.launch_year}}</p>
+              <p>Successful Launch: {{program.launch_success}}</p>
+              <p>Successful Landing: {{program.landing_success}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <h5 class="card-header">Features</h5>
+          <div class="card-body">
+            <app-filter (clickEvent)="getListByFilter($event)"></app-filter>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
+        <div class="row" *ngIf="programs">
+          <div class="col-xs-12 col-md-6 col-lg-3" *ngFor="let program of programs; let i = index">
+            <app-tile [program]="program"></app-tile>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

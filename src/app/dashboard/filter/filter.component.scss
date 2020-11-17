@@ -1,0 +1,13 @@
+.mission-filter {
+    .btn-group {
+        display: flex;
+        .btn:not(:first-child),
+        .btn-group>.btn-group:not(:first-child)>.btn,
+        .btn:not(:last-child):not(.dropdown-toggle),
+        .btn-group>.btn {
+            border-radius: .25rem;
+            margin: 10px 5%;
+            width: 35%;
+        }
+    }
+}
