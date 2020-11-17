@@ -7,16 +7,16 @@
           <a href="#" class="card-link">{{program.mission_name}} #{{program.flight_number}}</a>
       </h5>
       <div>
-        Mission Id(s): 
+        <strong>Mission Id(s):</strong> 
         <ul>
             <li *ngFor="let id of program.mission_id">
                 {{id}}
             </li>
         </ul>
       </div>
-    <p>Launch Year: {{program.launch_year}}</p>
-    <p>Successful Launch: {{program.launch_success}}</p>
-    <p>Successful Landing: {{program.landing_success}}</p>
+    <p><strong>Launch Year:</strong> {{program.launch_year}}</p>
+    <p><strong>Successful Launch:</strong> {{program.launch_success}}</p>
+    <p><strong>Successful Landing:</strong> {{program.landing_success}}</p>
     </div>
 
   </div>
